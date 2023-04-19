@@ -19,6 +19,11 @@ function MyApp({ Component, pageProps }) {
       )}
       {!showSplash && 
       <div className="content">
+        <div className="navbar">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
         <Component {...pageProps} />
       </div>}
     </div>

@@ -9,7 +9,6 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: black;
     color: white
 }
@@ -17,23 +16,32 @@ body {
 .content {
     animation: fade-in 2s ease-out forwards;
     opacity: 0;
+    padding: 100px;
 }
   
 .splash-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     color: white;
     font-size: 3rem;
+    align-self: center;
     animation: fade-out 2s ease-out forwards;
-    visibility: visible;
 }
-  
-.loading {
-    animation: none;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 50px;
 }
-  
+
+.navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -46,11 +54,9 @@ body {
 @keyframes fade-in {
     0% {
       opacity: 0;
-      transform: translateY(20px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
     }
 }
   
