@@ -23,11 +23,11 @@ function MyApp({ Component, pageProps }) {
       {!showSplash && 
       <div className="content">
         <div class="navbar">
-          <a href="#"><FontAwesomeIcon icon={faBars} /></a>
+          <a title="Menu"><FontAwesomeIcon icon={faBars} /></a>
           <div class="dropdown">
-            <a href="#"><FontAwesomeIcon icon={faHouse} /></a>
-            <a href="#"><FontAwesomeIcon icon={faUser} /></a>
-            <a href="#"><FontAwesomeIcon icon={faCode} /></a>
+            <a href="#" title="Home"><FontAwesomeIcon icon={faHouse} /></a>
+            <a href="#" title="About Me"><FontAwesomeIcon icon={faUser} /></a>
+            <a href="#" title="Projects"><FontAwesomeIcon icon={faCode} /></a>
           </div>
         </div>
         <Component {...pageProps} />
