@@ -1,7 +1,21 @@
+@font-face {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
+}
+  
+@font-face {
+    font-family: 'SF Pro';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../public/fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'SF Pro', sans-serif;
 }
   
 .app {
@@ -23,7 +37,7 @@ body {
     color: white;
     font-size: 3rem;
     align-self: center;
-    animation: fade-out 3s ease-out forwards;
+    animation: fade-out 2s ease-out forwards;
 }
 
 .navbar {
