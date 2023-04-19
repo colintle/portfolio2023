@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../styles/globals.css";
+import { faHouse, faUser, faCode, faBars} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 function MyApp({ Component, pageProps }) {
   const [showSplash, setShowSplash] = useState(true);
@@ -19,10 +22,13 @@ function MyApp({ Component, pageProps }) {
       )}
       {!showSplash && 
       <div className="content">
-        <div className="navbar">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        <div class="navbar">
+          <a href="#"><FontAwesomeIcon icon={faBars} /></a>
+          <div class="dropdown">
+            <a href="#"><FontAwesomeIcon icon={faHouse} /></a>
+            <a href="#"><FontAwesomeIcon icon={faUser} /></a>
+            <a href="#"><FontAwesomeIcon icon={faCode} /></a>
+          </div>
         </div>
         <Component {...pageProps} />
       </div>}
