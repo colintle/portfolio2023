@@ -1,68 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 @font-face {
     font-family: 'SF Pro';
     font-weight: 400;
     font-style: normal;
     src: url('../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: 'SF Pro';
     font-weight: 600;
     font-style: normal;
     src: url('../public/fonts/SF-Pro-Text-Semibold.otf') format('opentype');
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'SF Pro', sans-serif;
-    background-color: black;
-    color: white;
-}
+  }
   
-.app {
-    background-color: black;
-    color: white
-}
-
-.home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content {
-    animation: fade-in 2s ease-out forwards;
-    opacity: 0;
-    padding: 100px;
-}
+  /* Add additional @font-face rules for any other weights or styles you need */
   
-.splash-screen {
-    color: white;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fade-out 2.5s ease-out forwards;
-    height: 100vh;
-    width: 100vw;
-}
-
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-}
+  body {
+    font-family: 'SF Pro';
+  }
   

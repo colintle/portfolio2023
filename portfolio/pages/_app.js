@@ -13,14 +13,14 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <div className="app">
+    <div>
       {showSplash && (
-        <div className="splash-screen">
+        <div>
           <h1>Hello, World</h1>
         </div>
       )}
       {!showSplash && 
-      <div className="content">
+      <div>
         <NavBar/>
         <Component {...pageProps} />
       </div>}
