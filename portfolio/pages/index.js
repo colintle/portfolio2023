@@ -1,10 +1,11 @@
 import React from 'react';
-import About from '..//components/Section/About';
+import Feature from '@/components/Feature/Feature';
 
 function Index() {
   return (
-    <div className="home">
-      <About/>
+    <div>
+      <Feature/>
+      Home
     </div>
   );
 }
