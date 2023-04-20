@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/globals.css";
-import { faHouse, faUser, faCode, faBars} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import NavBar from "../components/NavBar/NavBar";
 
 function MyApp({ Component, pageProps }) {
   const [showSplash, setShowSplash] = useState(true);
@@ -10,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     setTimeout(() => {
       setShowSplash(false);
-    }, 2000);
+    }, 2500);
   }, []);
 
   return (
@@ -22,14 +21,7 @@ function MyApp({ Component, pageProps }) {
       )}
       {!showSplash && 
       <div className="content">
-        <div class="navbar">
-          <a title="Menu"><FontAwesomeIcon icon={faBars} /></a>
-          <div class="dropdown">
-            <a href="#" title="Home"><FontAwesomeIcon icon={faHouse} /></a>
-            <a href="#" title="About Me"><FontAwesomeIcon icon={faUser} /></a>
-            <a href="#" title="Projects"><FontAwesomeIcon icon={faCode} /></a>
-          </div>
-        </div>
+        <NavBar/>
         <Component {...pageProps} />
       </div>}
     </div>
