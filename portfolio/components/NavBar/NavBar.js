@@ -3,8 +3,8 @@ import Widget from '../Widget/Widget'
 
 function NavBar() {
   return (
-    <div className='backdrop-blur-sm bg-white/30 w-5/6 m-auto rounded-lg sticky bottom-0 flex justify-center'>
-      <div className='flex justify-between'>
+    <div className='backdrop-blur-sm bg-black/5 max-w-fit m-auto rounded-2xl sticky bottom-0 flex justify-center'>
+      <div className='flex justify-between mx-6'>
         <Widget/>
         <Widget/>
       </div>

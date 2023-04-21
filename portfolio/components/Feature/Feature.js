@@ -33,9 +33,7 @@ function Feature() {
     ];
 
     const prevSlide = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? slides.length - 1: currentIndex - 1;
-        setCurrentIndex(newIndex)
+        setCurrentIndex(Math.abs((currentIndex - 1) % slides.length))
     }
 
     const nextSlide = () => {
