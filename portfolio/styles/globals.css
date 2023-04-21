@@ -2,24 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@font-face {
-    font-family: 'SF Pro';
+ @font-face {
+    font-family: 'SF Pro Light';
     font-weight: 400;
     font-style: normal;
     src: url('../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
   }
+
+  @font-face {
+    font-family: 'SF Pro Display Thin';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../public/fonts/SF-Pro-Display-Thin.otf') format('opentype');
+  }
   
   @font-face {
     font-family: 'SF Pro';
-    font-weight: 600;
+    font-weight: 1000;
     font-style: normal;
-    src: url('../public/fonts/SF-Pro-Text-Semibold.otf') format('opentype');
-  }
-  
+    src: url('../public/fonts/SF-Pro-Text-Bold.otf') format('opentype');
+  }  
   /* Add additional @font-face rules for any other weights or styles you need */
   
   body {
     font-family: 'SF Pro';
+  }
+
+  p {
+    font-family: 'SF Pro Display Thin';
   }
   

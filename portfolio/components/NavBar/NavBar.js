@@ -1,19 +1,16 @@
 import React from 'react'
-// import { faHouse, faUser, faCode, faBars} from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Widget from '../Widget/Widget'
 
 function NavBar() {
   return (
-    <div>
-        {/* <a title="Menu"><FontAwesomeIcon icon={faBars} /></a>
-        <div>
-            <a href="#" title="Home"><FontAwesomeIcon icon={faHouse} /></a>
-            <a href="#" title="About Me"><FontAwesomeIcon icon={faUser} /></a>
-            <a href="#" title="Projects"><FontAwesomeIcon icon={faCode} /></a>
-        </div> */}
-        NavBar
+    <div className='backdrop-blur-sm bg-white/30 w-5/6 m-auto rounded-lg sticky bottom-0 flex justify-center'>
+      <div className='flex justify-between'>
+        <Widget/>
+        <Widget/>
+      </div>
     </div>
   )
+
 }
 
 export default NavBar

@@ -8,7 +8,7 @@ function Feature() {
     useEffect(() => {
         const intervalId = setInterval(() => {
             nextSlide()
-        }, 2000);
+        }, 3000);
 
         return () => clearInterval(intervalId);
     }, [currentIndex]);
@@ -47,7 +47,7 @@ function Feature() {
     }
 
     return (
-        <div className='max-w-[1400px] h-[700px] w-full- m-auto py-16 px-4 relative group'>
+        <div className='max-w-[1100px] h-[550px] w-full- m-auto py-16 px-4 relative group'>
             <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
             </div>
             {/* Left arrow */}
