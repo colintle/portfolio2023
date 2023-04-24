@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import {BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import {RxDotFilled} from "react-icons/rx"
+import { useInView } from 'react-intersection-observer';
 
 function Feature() {
+    const { ref, inView } = useInView();
     const [currentIndex, setCurrentIndex] = useState(0);
     
     useEffect(() => {
@@ -45,24 +47,29 @@ function Feature() {
     }
 
     return (
-        <div className='max-w-[1100px] h-[550px] w-full m-auto py-16 px-4 relative group'>
-            <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
-            </div>
-            {/* Left arrow */}
-            <div className=' hidden group-hover:block absolute top-[50%] -translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <BsChevronCompactLeft onClick={prevSlide} size={30}/>
-            </div>
-            {/* Right arrow */}
-            <div className='hidden group-hover:block absolute top-[50%] -translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <BsChevronCompactRight onClick={nextSlide} size={30}/>
-            </div>
+        <div
+        ref={ref}
+        className={`transition-opacity duration-1000 ease-in-out ${inView ? 'opacity-1' : 'opacity-0'}`}
+        >
+            <div className='max-w-[1100px] h-[550px] w-full m-auto py-16 px-4 relative group'>
+                <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
+                </div>
+                {/* Left arrow */}
+                <div className=' hidden group-hover:block absolute top-[50%] -translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+                </div>
+                {/* Right arrow */}
+                <div className='hidden group-hover:block absolute top-[50%] -translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <BsChevronCompactRight onClick={nextSlide} size={30}/>
+                </div>
 
-            <div className='flex top-4 justify-center py-2'>
-                {slides.map((slide, slideIndex) => (
-                    <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer'>
-                        <RxDotFilled/>
-                    </div>
-                ))}
+                <div className='flex top-4 justify-center py-2'>
+                    {slides.map((slide, slideIndex) => (
+                        <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer'>
+                            <RxDotFilled/>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

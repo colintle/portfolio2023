@@ -7,7 +7,7 @@ function NavBar() {
     <div className='backdrop-blur-sm bg-black/5 max-w-fit m-auto rounded-2xl sticky bottom-5 flex justify-center'>
       <div className='flex justify-between mx-6'>
         {
-          NAV && NAV.map((element) => (<Widget icon={element}/>))
+          NAV && NAV.map((element, i) => (<Widget icon={element} key={i}/>))
         }
       </div>
     </div>
