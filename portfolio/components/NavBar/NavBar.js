@@ -1,6 +1,6 @@
 import React from 'react'
 import Widget from '../Widget/Widget'
-import {NAV} from "../../data/Nav";
+import {NAV} from "../../data/Data";
 
 function NavBar() {
   return (
