@@ -12,17 +12,14 @@ function About() {
     ref={ref}
     className={`transition-opacity duration-1000 ease-in-out ${inView ? 'opacity-1' : 'opacity-0'}`}
     >
-      <h1 className='text-5xl'>About</h1>
-      <div className="flex w-full h-full">
-        <div className="shrink-0">
-          <div className='overflow-hidden'>
-            <Image src={profile}></Image>
+      <div className='w-screen h-screen flex justify-center items-center bg-black'>
+        <div className='grid lg:grid-cols-2 gap-3 md:grid-cols-1'>
+          <div>
+
           </div>
-        </div>
-        <div className='grid grid-cols-1 content-between bg-green-400'>
-          {
-             ABOUT && ABOUT.map((element, i) => (<Slide data={element} key={i}/>))
-          }
+          <div>
+            <h1 className='text-5xl text-white'>Hi, I'm Colin</h1>
+          </div>
         </div>
       </div>
     </div>
