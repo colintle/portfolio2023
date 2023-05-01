@@ -1,25 +1,22 @@
-import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
+import Image from "next/image";
+import Picture from "../../public/images/me.jpg"
 
-import Slide from './Slide'
-import {ABOUT} from "../../data/Data";
-import profile from "../../public/images/me.jpg"
+import Background from "@/components/Particles/Background";
 
 function About() {
-  const { ref, inView } = useInView();
   return(
-    <div
-    ref={ref}
-    className={`transition-opacity duration-1000 ease-in-out ${inView ? 'opacity-1' : 'opacity-0'}`}
-    >
-      <div className='w-screen h-screen flex justify-center items-center bg-black'>
-        <div className='grid lg:grid-cols-2 gap-3 md:grid-cols-1'>
-          <div>
-
-          </div>
-          <div>
-            <h1 className='text-5xl text-white'>Hi, I'm Colin</h1>
-          </div>
+    <div className="h-screen relative">
+      <Background/>
+      <div className="absolute z-10 top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
+        <p className="text-xl">Hi, I'm</p>
+        <h1
+          className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700"
+        >
+        Colin Le.
+        </h1>
+        <p className="text-xl">Learn more about me!</p>
+        <div>
+          <p>Socials Here</p>
         </div>
       </div>
     </div>

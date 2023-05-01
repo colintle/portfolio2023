@@ -18,7 +18,7 @@ function Background() {
         <Particles
         id="tsparticles"
         init={particlesInit}
-        className='h-full'
+        className="h-full"
         options={{
             fullScreen: {
                 enable: false,
@@ -26,7 +26,7 @@ function Background() {
             },
             background: {
               color: {
-                value: "#FFF"
+                value: "#000"
               },
               image: "",
               position: "50% 50%",
@@ -133,17 +133,17 @@ function Background() {
                 area: {
                   gradient: {
                     start: {
-                      value: "#808080"
+                      value: "#000"
                     },
                     stop: {
-                      value: "#000000"
+                      value: "#FFF"
                     }
                   },
                   radius: 1000
                 },
                 shadow: {
                   color: {
-                    value: "#000000"
+                    value: "#fff"
                   },
                   length: 2000
                 }
@@ -195,7 +195,7 @@ function Background() {
               }
             },
             color: {
-              value: "#808080",
+              value: "#fff",
               animation: {
                 h: {
                   count: 0,
@@ -286,7 +286,7 @@ function Background() {
                 length: 10,
                 fill: {
                   color: {
-                    value: "#000000"
+                    value: "#fff"
                   }
                 }
               },
@@ -326,7 +326,7 @@ function Background() {
             shadow: {
               blur: 0,
               color: {
-                value: "#000"
+                value: "#fff"
               },
               enable: false,
               offset: {
@@ -451,7 +451,7 @@ function Background() {
             stroke: {
               width: 1,
               color: {
-                value: "#808080",
+                value: "#fff",
                 animation: {
                   h: {
                     count: 0,
@@ -619,7 +619,7 @@ function Background() {
             links: {
               blink: false,
               color: {
-                value: "#808080"
+                value: "#fff"
               },
               consent: false,
               distance: 150,
