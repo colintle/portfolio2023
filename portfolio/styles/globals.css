@@ -3,7 +3,7 @@
 @tailwind utilities;
 
  @font-face {
-    font-family: 'SF Pro Light';
+    font-family: 'SF Pro Regular';
     font-weight: 400;
     font-style: normal;
     src: url('../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
@@ -29,6 +29,6 @@
   }
 
   p {
-    font-family: 'SF Pro Display Thin';
+    font-family: 'SF Pro Regular';
   }  
   
