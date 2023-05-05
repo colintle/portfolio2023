@@ -6,11 +6,9 @@ import Experience from "@/components/Experience/Experience";
 function Index() {
 
   return (
-    <div>
+    <div className="bg-white text-black">
         <Hero/>
         <About/>
-        <Projects/>
-        <Experience/>
     </div>
   );
 }

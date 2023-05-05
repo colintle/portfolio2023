@@ -12,7 +12,7 @@ function Hero() {
       <div className="absolute z-10 top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
         <p className="text-mg lg:text-lg xl:text-xl">Hi, I'm</p>
         <h1
-          className="font-extrabold text-transparent text-5xl lg:text-7xl xl:text-9xl bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 text-center"
+          className="font-extrabold text-transparent text-6xl lg:text-7xl xl:text-9xl bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 text-center"
         >
         Colin Le.
         </h1>
