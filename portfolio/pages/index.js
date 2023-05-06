@@ -9,6 +9,7 @@ function Index() {
     <div className="bg-white text-black">
         <Hero/>
         <About/>
+        <Projects/>
     </div>
   );
 }

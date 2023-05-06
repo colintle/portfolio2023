@@ -1,60 +1,15 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react'
 
 function Projects() {
-  const scroller = useRef();
-  const skills = useRef();
-
-  useEffect(() => {
-    let skillSet = gsap.utils.toArray('.skill-set');
-
-    let to = gsap.to(skillSet, {
-      xPercent: () => -100 * (skillSet.length - 1),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: scroller.current,
-        markers: false,
-        pin: true,
-        pinSpacing: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-        snap: 1 / (skillSet.length - 1),
-
-        end: () => '+=' + window.innerWidth,
-      },
-    });
-
-    return () => {
-      to.kill();
-    };
-  }, []);
-
-
   return (
-    <div className='overflow-hidden flex'>
-      <div className='overflow-hidden'>
-        <div
-        id="skills"
-        ref={scroller}
-        className='flex overflow-x-hidden text-white bg-black w-[400vw] m-0 relative h-screen'
-        >
-          <div ref={skills} className="skill-set w-screen bg-transparent ns-horizontal-section__item">
-            <h1 className='text-5xl'>Projects</h1>
-          </div>
-
-          <div ref={skills} className="skill-set w-screen bg-transparent ns-horizontal-section__item">
-            <h1 className='text-5xl'>Projects</h1>
-          </div>
-
-          <div ref={skills} className="skill-set w-screen bg-transparent ns-horizontal-section__item">
-            <h1 className='text-5xl'>Projects</h1>
-          </div>
-
+    <div className='md:h-screen flex justify-center'>
+      <div className='w-3/4 md:w-1/2'>
+        <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-5'>
+          Projects
+          <hr className='w- h-1 mx-auto my-4 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
+        </h1>
+        <div className='text-mg lg:text-lg xl:text-xl'>
+            <p>Projects</p>
         </div>
       </div>
     </div>
