@@ -5,8 +5,8 @@ import { PROJECTS } from '@/data/Data'
 
 function Projects() {
 
-  const [seeMore, setSeeMore] = useState(false)
-  const [currProjects, setCurrProjects] = useState([PROJECTS[0], PROJECTS[1]])
+  // const [seeMore, setSeeMore] = useState(false)
+  // const [currProjects, setCurrProjects] = useState([PROJECTS[0], PROJECTS[1]])
 
   const picture = (image) => {
     return (
@@ -44,15 +44,15 @@ function Projects() {
     )
   }
 
-const handleSeeMore = () => {
-  setSeeMore(!seeMore)
-  if (seeMore) {
-    const newProjects = PROJECTS.slice(2)
-    setCurrProjects([...currProjects, ...newProjects])
-  } else {
-    setCurrProjects([PROJECTS[0], PROJECTS[1]])
-  }
-}
+// const handleSeeMore = () => {
+//   setSeeMore(!seeMore)
+//   if (seeMore) {
+//     const newProjects = PROJECTS.slice(2)
+//     setCurrProjects([...currProjects, ...newProjects])
+//   } else {
+//     setCurrProjects([PROJECTS[0], PROJECTS[1]])
+//   }
+// }
 
   return (
     <div className='flex justify-center'>
@@ -63,7 +63,7 @@ const handleSeeMore = () => {
         </h1>
         <div className='text-mg lg:text-lg xl:text-xl flex flex-col space-y-28 my-5'>
           {
-            currProjects.map((project, idx) => {
+            PROJECTS.map((project, idx) => {
               return (
                 <div key={idx}>
                   {
@@ -87,13 +87,13 @@ const handleSeeMore = () => {
             })
           }
         </div>
-        <div className='w-fit m-auto bg-gradient-to-b from-sky-600 to-purple-700 p-1 rounded-md shawdow-xl hover:-translate-y-1 transition-transform cursor-pointer my-5'>
+        {/* <div className='w-fit m-auto bg-gradient-to-b from-sky-600 to-purple-700 p-1 rounded-md shawdow-xl hover:-translate-y-1 transition-transform cursor-pointer my-5'>
           <div class=" h-full w-full bg-white rounded-sm px-2">
             <button onClick={handleSeeMore}>
-              {!seeMore ? "See Less" : "See More"}
+              {seeMore ? "See Less" : "See More"}
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
