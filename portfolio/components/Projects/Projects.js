@@ -34,7 +34,7 @@ function Projects() {
             <Link href={github} target="_blank">
               <div className='hover:-translate-y-1 transition-transform cursor-pointer'>
                 <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
-                  <i class="fa-brands fa-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </span> 
               </div>
             </Link>

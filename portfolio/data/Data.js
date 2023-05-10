@@ -35,6 +35,38 @@ export const PROJECTS = [{
   },
 ]
 
-export const EXPERIENCE = [
-    
+export const EXPERIENCE_KEYS = [
+  "Mirizan",
+  "Robins Air Force Base",
+  "Lockheed Martin", 
+  "University of Central Florida",
+  "J.P. Morgan & Chase"
+]
+
+export const EXPERIENCE_VALUES = [
+  {
+    name: "Sofware Engineering Intern @ Mirizan LLC",
+    duration: "January 2022 - May 2022",
+    description: []
+  },
+  {
+    name: "Computer Scientist Intern @ Robins Air Force Base",
+    duration: "June 2022 - August 2022",
+    description: []
+  },
+  {
+    name: "System Engineering Intern @ Lockheed Martin",
+    duration: "August 2022 - January 2023",
+    description: []
+  },
+  {
+    name: "Software Engineering Intern @ Univeristy of Central Florida",
+    duration: "February 2023 - Present",
+    description: []
+  },
+  {
+    name: "Software Engineering Intern @ J.P. Morgan & Chase",
+    duration: "June 2023 - August 2023",
+    description: []
+  }
 ]
