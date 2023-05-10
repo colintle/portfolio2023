@@ -43,7 +43,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
+  background: linear-gradient(to bottom, #0284c7, #7e22ce);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;

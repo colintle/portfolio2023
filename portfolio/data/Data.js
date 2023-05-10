@@ -36,11 +36,11 @@ export const PROJECTS = [{
 ]
 
 export const EXPERIENCE_KEYS = [
-  "Mirizan",
-  "Robins Air Force Base",
-  "Lockheed Martin", 
+  "J.P. Morgan & Chase", 
   "University of Central Florida",
-  "J.P. Morgan & Chase"
+  "Lockheed Martin",
+  "Robins Air Force Base",
+  "Mirizan"
 ]
 
 export const EXPERIENCE_VALUES = [
