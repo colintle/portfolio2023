@@ -33,6 +33,10 @@
     font-family: 'SF Pro Regular';
   }
 
+  h3 {
+    font-family: 'SF Pro Display Thin';
+  }
+
   /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 20px;
