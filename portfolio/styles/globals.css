@@ -29,13 +29,20 @@
     overflow: overlay;
   }
 
-  p {
+  p, button {
     font-family: 'SF Pro Regular';
   }
 
   h3 {
     font-family: 'SF Pro Display Thin';
   }
+
+  @media (max-height: 240px) {
+    #arrow {
+      display: none;
+    }
+  }
+  
 
   /* custom scrollbar */
 ::-webkit-scrollbar {

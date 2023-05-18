@@ -7,7 +7,7 @@ import Background from "@/components/Particles/Background";
 
 function Hero() {
   return(
-    <div className="h-screen relative">
+    <div className="relative">
       <Background/>
       <div className="absolute z-10 top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
         <p className="text-mg lg:text-lg xl:text-xl">Hi, I'm</p>
@@ -17,7 +17,7 @@ function Hero() {
         Colin Le.
         </h1>
         <p className="text-mg lg:text-lg xl:text-xl">Learn more about me!</p>
-        <div className="invisible md:visible text-4xl text-blue-500 absolute bottom-0 w-full flex flex-col justify-center items-center animate-bounce">
+        <div id="arrow" className="invisible lg:visible text-4xl text-blue-500 absolute bottom-0 w-full flex flex-col justify-center items-center animate-bounce">
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700">
           <i className="fa-solid fa-angles-down"></i>
           </span>
