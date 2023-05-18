@@ -21,7 +21,7 @@ function Projects() {
     )
   }
 
-  const description = (name, description, note, github) => {
+  const description = (name, description, note, github, right) => {
     return (
       <div className='mt-12 md:w-1/2'>
         <h1 className='text-lg lg:text-xl xl:text-2xl mb-6'>{name}</h1>
@@ -32,7 +32,7 @@ function Projects() {
           {note && <p className='italic'>{note}</p>}
           {github && (
             <Link href={github} target="_blank">
-              <div className='hover:-translate-y-1 transition-transform cursor-pointer'>
+              <div className={`hover:-translate-y-1 transition-transform cursor-pointer ${right ? "float-right" : ""}`}>
                 <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
                   <i className="fa-brands fa-github"></i>
                 </span> 
@@ -43,16 +43,6 @@ function Projects() {
       </div>
     )
   }
-
-// const handleSeeMore = () => {
-//   setSeeMore(!seeMore)
-//   if (seeMore) {
-//     const newProjects = PROJECTS.slice(2)
-//     setCurrProjects([...currProjects, ...newProjects])
-//   } else {
-//     setCurrProjects([PROJECTS[0], PROJECTS[1]])
-//   }
-// }
 
   return (
     <div className='flex justify-center'>
@@ -70,14 +60,14 @@ function Projects() {
                     idx % 2 == 0 && (
                       <div className='flex flex-col md:flex-row md:space-x-12'>
                         {picture(project.image)}
-                        {description(project.name, project.description, project?.note, project?.github)}
+                        {description(project.name, project.description, project?.note, project?.github, false)}
                       </div>
                     )
                   }
                   {
                     idx % 2 == 1 && (
                       <div className='flex flex-col md:flex-row md:space-x-12'>
-                        {description(project.name, project.description, project?.note, project?.github)}
+                        {description(project.name, project.description, project?.note, project?.github, true)}
                         {picture(project.image)}
                       </div>
                     )
