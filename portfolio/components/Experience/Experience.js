@@ -36,8 +36,8 @@ function Experience() {
           {/*This will be where the experience is going to be at*/}
           <div className='text-mg lg:text-lg xl:text-xl flex flex-col flex-grow'>
             {/*Horizontal Scroll Bar*/}
-            <div class="m-auto w-full overflow-auto">
-              <div class="flex w-screen justify-between">
+            <div className="m-auto w-full overflow-auto mb-4">
+              <div className="flex w-screen justify-between">
                 {Object.keys(EXPERIENCE).map((name, idx) => {
                   return (
                     <button key={idx} value={name} onClick={handleTracker}>
@@ -49,11 +49,11 @@ function Experience() {
             </div>
             {/*View Component based on what the user clicks in the scroll bar*/}
             <div className='flex flex-col flex-grow'>
-              <div className='py-1'>
-                {tracker.name}
+              <div className='py-1 text-lg lg:text-xl xl:text-2xl mb-4'>
+                <strong>{tracker.name}</strong>
               </div>
-              <div>
-                <p>{tracker.duration}</p>
+              <div className='mb-4'>
+                <h3>{tracker.duration}</h3>
                 <div className='text-sm'>{listMaker(tracker.description)}</div>
               </div>
             </div>

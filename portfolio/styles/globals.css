@@ -29,13 +29,13 @@
     overflow: overlay;
   }
 
-  p, button {
+  p, button, h3, li {
     font-family: 'SF Pro Regular';
   }
 
-  h3 {
+  /* h3, li {
     font-family: 'SF Pro Display Thin';
-  }
+  } */
 
   @media (max-height: 240px) {
     #arrow {
