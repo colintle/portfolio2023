@@ -2,30 +2,30 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <div className="h-24 text-sm flex justify-evenly items-center">
+    <div className="h-52 text-sm flex justify-evenly items-center bg-black text-white py-10">
       <div className='h-full flex flex-col justify-between'>
         <a href="https://en.wikipedia.org/wiki/Next.js">
-          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'>
+          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             Resume
-            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 to-purple-700 border-0'></hr>
+            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
           </a>
-        <a href="https://en.wikipedia.org/wiki/Next.js">
-          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'>
+        <a href="mailto:colintranle@knights.ucf.edu">
+          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             Email
-            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 to-purple-700 border-0'></hr>
+            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Next.js">
-          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'>
+        <a href="https://www.linkedin.com/in/colin-le-527a2321a/">
+          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             Linkedin
-            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 to-purple-700 border-0'></hr>
+            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Next.js">
-          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'>
+        <a href="https://github.com/colintle">
+          <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             GitHub
-            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 to-purple-700 border-0'></hr>
+            <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
         </a>
       </div>

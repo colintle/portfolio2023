@@ -39,7 +39,7 @@ export const EXPERIENCE = {
   "J.P. Morgan & Chase": {
     name: 
     <h3>Software Engineering Intern
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ J.P. Morgan & Chase</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ J.P. Morgan & Chase</strong>
     </h3>,
     duration: "June 2023 - August 2023",
     description: ["TBA"]
@@ -47,7 +47,7 @@ export const EXPERIENCE = {
   "University of Central Florida": {
     name: 
     <h3>Software Engineering Intern 
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ University of Central Florida</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ University of Central Florida</strong>
     </h3>,
     duration: "February 2023 - Present",
     description: ["Part of the Techrangers Team at the Center for Distributed Learning Center in UCF", "Provide course development and web/application development for over 60,000 students and faculty members", "Work alongside Software Engineers to build internal and external tools such as", ["Code Syntax Highlighter - Flask/Python app to add syntax highlighting to the Canvas rich text editor", "Action Icons - Flask/Python app to embed customizable simple icons from images to the Canvas rich text editor", "Zapt - Flask/Python app that allows users to import .pptx, .docx, and .html files into the Canvas rich text editor"]]
@@ -55,7 +55,7 @@ export const EXPERIENCE = {
   "Lockheed Martin": {
     name: 
     <h3>System Engineering Intern 
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ Lockheed Martin</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Lockheed Martin</strong>
     </h3>,
     duration: "August 2022 - January 2023",
     description: ["Part of IRST (Infrared Search and Track) Algorithm Team at Lockheed Martin MFC (Missiles and Fire Control) in Orlando, Florida", "Architected and developed a MATLAB GUI for data management within the Algo Team to utilize storage efficiently", "Collaborated with other System Engineers on a MATLAB GUI to effectively generate flight replays based on the variations of IRST", "Practiced Agile Software Development to deliver top-of-the-line technologies"]
@@ -63,7 +63,7 @@ export const EXPERIENCE = {
   "Robins Air Force Base":   {
     name: 
     <h3>Computer Scientist Intern 
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ Robins Air Force Base</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Robins Air Force Base</strong>
     </h3>,
     duration: "June 2022 - August 2022",
     description: ["Part of Preminer College Intern Program (PCIP) for the Air Force Civilian Service (AFCS) in Warner Robins, Georgia", "Worked with recruiters on designing promotional material and AFCS's website for students in Fall 2022", "Developed technical skills such as Visual Basic Analysis (VBA) for Excel, JavaScript, ReactJS, NodeJS, and ExpressJS"]
@@ -71,7 +71,7 @@ export const EXPERIENCE = {
   "Mirizan":   {
     name: 
     <h3>Sofware Engineering Intern 
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ Mirizan LLC</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Mirizan LLC</strong>
     </h3>,
     duration: "January 2022 - May 2022",
     description: ["Worked with the owner of Mirizan to build a promotional mobile app for its products in React Native and MySQL", "Implemented an internal tool to automate emails being sent to suppliers of Mirizan using NodeJS and ExpressJS", "Developed technical skills such as React Native, Expo Go, AWS, and MySQL"]
@@ -79,7 +79,7 @@ export const EXPERIENCE = {
   "WEAR Lab":   {
     name: 
     <h3>Undergraduate Lab Researcher
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700'> @ Wearable Engineering and Assitive Robotics (WEAR) Lab</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Wearable Engineering and Assitive Robotics (WEAR) Lab</strong>
     </h3>,
     duration: "September 2021 - Present",
     description: ["Collaborating with undergraduate and graduate students to research wearable technologies for real world applications", "Worked on various projects including", ["Functional Electrical Stimulation (FES) for Pre-Impact Fall Detection and Intelligent", ["Developing a Python threshold/machine learning-based pre-impact fall detection algorithm to detect a fall at its descending phase", "Developing a closed-loop FES control algorithm using Pandas and Numpy for arresting a fall in real-time after pre-impact fall detection"], "Interactive and Intuitive Autonomous Robotic Cart (I^3ARC)", ["Developing an autonomous cart using a Robot Operating System (ROS) platform for navigation, collision avoidance and person following features", "Developing a mobile app to help customers interact with the autonomous cart using React Native"]]]

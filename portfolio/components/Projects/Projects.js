@@ -48,7 +48,7 @@ function Projects() {
       <div className='w-3/4 md:w-1/2'>
         <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-5'>
           Featured Projects
-          <hr className='h-1 mx-auto my-4 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
+          <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
         </h1>
         <div className='text-mg lg:text-lg xl:text-xl flex flex-col space-y-28 my-5'>
           {
@@ -76,13 +76,6 @@ function Projects() {
             })
           }
         </div>
-        {/* <div className='w-fit m-auto bg-gradient-to-b from-sky-600 to-purple-700 p-1 rounded-md shawdow-xl hover:-translate-y-1 transition-transform cursor-pointer my-5'>
-          <div class=" h-full w-full bg-white rounded-sm px-2">
-            <button onClick={handleSeeMore}>
-              {seeMore ? "See Less" : "See More"}
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   )
