@@ -1,6 +1,7 @@
-import {useState, useEffect} from 'react'
-
 import { EXPERIENCE } from "@/data/Data"
+
+import { useState } from "react";
+import { useInView } from "react-intersection-observer"
 
 const listMaker = (list, index) => {
   return (
@@ -19,6 +20,7 @@ const listMaker = (list, index) => {
 
 function Experience() {
   const [tracker, setTracker] = useState(EXPERIENCE["J.P. Morgan & Chase"])
+  const {ref, inView} = useInView({threshold:0.5, triggerOnce: true})
 
   const handleTracker = (e) => {
     const value = e.target.value; // The value is already a string
@@ -27,16 +29,17 @@ function Experience() {
   }
 
   return (
-    <div className='min-h-screen flex justify-center text-white bg-black'>
+    <div ref={ref} className='min-h-screen flex justify-center text-white bg-black'>
       <div className='w-3/4 md:w-1/2 flex flex-col'>
+        <p className="text-white">{inView ? "True" : "False"}</p>
           <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-5'>
-            <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>My Industry Experience</strong>
-            {/* <hr className='h-1 mx-auto my-4 bg-white border-0 rounded'></hr> */}
+            <strong className='text-transparent text-white'>My Industry Experience</strong>
+            <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0 rounded'></hr>
           </h1>
           {/*This will be where the experience is going to be at*/}
           <div className='text-mg lg:text-lg xl:text-xl flex flex-col flex-grow'>
             {/*Horizontal Scroll Bar*/}
-            <div className="text-neutral-500 m-auto w-full overflow-auto mb-4">
+            <div id="horizontal" className="text-neutral-500 m-auto w-full overflow-auto mb-4">
               <div className="flex w-screen justify-between">
                 {Object.keys(EXPERIENCE).map((name, idx) => {
                   return (
@@ -58,7 +61,8 @@ function Experience() {
               </div>
             </div>
           </div>
-        </div>
+        <p className="text-white">{inView ? "True" : "False"}</p>
+      </div>
     </div>
   )
 }

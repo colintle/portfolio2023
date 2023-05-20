@@ -37,7 +37,7 @@
     font-family: 'SF Pro Display Thin';
   } */
 
-  @media (max-height: 240px) {
+  @media (max-height: 260px) {
     #arrow {
       display: none;
     }
@@ -59,6 +59,10 @@
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
+}
+
+#horizontal::-webkit-scrollbar-thumb{
+  background-color: rgb(107 114 128);
 }
 
 ::-webkit-scrollbar-thumb:hover {

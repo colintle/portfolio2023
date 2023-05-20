@@ -4,8 +4,6 @@ import { loadFull } from "tsparticles";
 function Background() {
 
     const particlesInit = async (main) => {
-        console.log(main);
-    
         await loadFull(main);
     };
      

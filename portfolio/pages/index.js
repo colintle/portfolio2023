@@ -1,13 +1,17 @@
-import Hero from "@/components/Hero/Hero";
-import About from "@/components/About/About";
-import Projects from "@/components/Projects/Projects";
-import Experience from "@/components/Experience/Experience";
-import Footer from "@/components/Footer/Footer";
+import Hero from "@/components/Hero/Hero.js";
+import About from "@/components/About/About.js";
+import Projects from "@/components/Projects/Projects.js";
+import Experience from "@/components/Experience/Experience.js";
+import Footer from "@/components/Footer/Footer.js";
+
+import 'animate.css';
+import Background from "@/components/Particles/Background";
 
 function Index() {
 
   return (
     <div className="bg-white text-black">
+        <Background/>
         <Hero/>
         <About/>
         <Experience/>

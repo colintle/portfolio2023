@@ -1,5 +1,6 @@
 Personal Chat Bot (Add Search Bar on top of Portfolio)
 
-Hero Section
 Good Profile Picture
-Bottom NavBar
+
+Add animations using animate.css
+Make sure everything is working correctly when it is visible

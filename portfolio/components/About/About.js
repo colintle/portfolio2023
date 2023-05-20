@@ -1,9 +1,12 @@
-import React from 'react'
+import { useInView } from "react-intersection-observer"
 
 function About() {
+  const {ref, inView} = useInView({threshold:0.5, triggerOnce: true})
+
   return (
-    <div className='min-h-screen flex justify-center'>
+    <div ref={ref} className='min-h-screen flex justify-center'>
         <div className='w-3/4 md:w-1/2 flex flex-col'>
+            <p className="text-black">{inView ? "True" : "False"}</p>
             <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-5'>
               Who is Colin Le?
               <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
@@ -17,6 +20,7 @@ function About() {
                 and many more.</p>
                 <p className=''>Outside of school and work, I prioritize self-improvement as a crucial aspect of my personal life through mediums such as reading books, working out, and learning new technologies.</p>
             </div>
+            <p className="text-black">{inView ? "True" : "False"}</p>
         </div>
     </div>
   )
