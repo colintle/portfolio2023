@@ -1,7 +1,9 @@
 import Background from "@/components/Particles/Background";
 
-import { useInView, InView } from "react-intersection-observer"
+import { useInView } from "react-intersection-observer"
 import { useState } from "react";
+import Link from "next/link";
+
 
 function Hero() {
   const {ref, inView} = useInView({threshold:1.0})
@@ -18,6 +20,20 @@ function Hero() {
         Colin Le.
         </h1>
         <p className="text-lg lg:text-xl xl:text-2xl">Learn more about me!</p>
+        <Link href={"/bot"}>
+          <button className="mt-8 bg-white rounded-2xl p-3 shadow-lg hover:-translate-y-1 transition-transform cursor-pointer flex">
+            <p className="text-black shadow-lg">
+              <strong>
+                Talk to my Assistant
+              </strong>
+            </p>
+            <div className="shadow-lg">
+              <span className="ml-1 text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
+                  <i className="fa-solid fa-angles-right"></i>
+              </span>
+            </div>
+          </button>
+        </Link>
       </div>
       <div id="arrow" className={`${inView ? "" : "opacity-0"} invisible lg:visible text-4xl text-blue-500 absolute bottom-0 w-full flex flex-col justify-center items-center animate-bounce`}>
         <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700">

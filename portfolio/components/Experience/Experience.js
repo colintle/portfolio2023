@@ -32,7 +32,7 @@ function Experience() {
     const menuWidth = menu.offsetWidth;
     const itemOffsetLeft = item.offsetLeft;
     const itemWidth = item.offsetWidth;
-    const scrollLeft = itemOffsetLeft - ((menuWidth - itemWidth) * 1.25);
+    const scrollLeft = itemOffsetLeft - ((menuWidth - itemWidth));
 
     menu.scrollTo({
       left: scrollLeft,
