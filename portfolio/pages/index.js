@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer.js";
 import Background from "@/components/Particles/Background";
 
 import 'animate.css';
+import PopUp from "@/components/PopUp/PopUp";
 
 function Index() {
 
@@ -17,6 +18,7 @@ function Index() {
         <Experience/>
         <Projects/>
         <Footer/>
+        <PopUp/>
     </div>
   );
 }

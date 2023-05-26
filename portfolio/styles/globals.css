@@ -37,8 +37,8 @@
     font-family: 'SF Pro Display Thin';
   } */
 
-  @media (max-height: 260px) {
-    #arrow {
+  @media (max-height: 300px) {
+    #arrow, .resize {
       display: none;
     }
   }
