@@ -20,8 +20,16 @@ Helpful answer in markdown:`;
 
 export const makeChain = (vectorstore) => {
     const model = new OpenAI({
-      temperature: 1,
+      temperature: 2,
       modelName: 'gpt-3.5-turbo',
+      streaming: true,
+      callbacks: [
+        {
+          handleLLMNewToken(token){
+            re
+          }
+        }
+      ]
     });
   
     const chain = ConversationalRetrievalQAChain.fromLLM(

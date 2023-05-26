@@ -3,37 +3,18 @@ import Link from 'next/link';
 import axios from 'axios';
 
 function bot() {
-  const [input, setInput] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [incoming, setIncoming] = useState( { type: "api", message: "" });
+  const [newMessage, setNewMessage] = useState( { role: "ai", message: "" } );
 
   // Basically chat history between bot and the user
   const [messages, setMessages] = useState([
     {
-      message: 'Hi, what would you like to learn about Colin Le?',
+      message: 'Hi, what would you like to know about Colin Le?',
       type: 'api',
-    },
-    {
-      message: 'Test 1',
-      type: 'user'
-    },
-    {
-      message: 'Test 1',
-      type: 'user'
-    },
-    {
-      message: 'Test 1',
-      type: 'user'
-    },
-    {
-      message: 'Test 1',
-      type: 'user'
-    },
-    {
-      message: 'Test 1',
-      type: 'user'
-    }
-  ,])
+    }])
 
   // Use to send to "/api/respond"
   const [history, setHistory] = useState([])
@@ -50,7 +31,17 @@ function bot() {
     if (messageList) {
       messageList.scrollTop = messageList.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, incoming]);
+
+  useEffect(() => {
+      setNewMessage(incoming);
+  }, [incoming])
+
+  useEffect(() => {
+      if (newMessage.message) {
+          setMessages((prevMsgs) => [...prevMsgs, newMessage]);
+      }
+  }, [loading])
 
   async function handleSubmit(e){
     e.preventDefault()
@@ -60,40 +51,43 @@ function bot() {
     if (!input)
     {
       alert("Please input a question!")
-      return
+      return;
     }
 
-    const question = input.trim()
+    const question = input.trim();
 
-    setMessages((state) = [...state, {message: question, type: "user"}])
+    setMessages((state) => [...state, { message: question, type: "user" }]);
+
     setLoading(true)
     setInput("")
-
+    setIncoming( { type: "api", message: "" });
     try {
-      const response = await axios.post('/api/respond', {
-        question,
-        history
-      })
-
-      const data = response.data
-      
-      if (data?.error){
-        setError(data.error)
+      const response = await fetch("api/respond", {
+        method: "POST",
+        body: JSON.stringify({ question: question, history: history }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+  
+      const reader = response.body.getReader();
+  
+      while (true) {
+        const { done, value } = await reader.read();
+  
+        if (done) {
+          break;
+        }
+  
+        const text = new TextDecoder().decode(value);
+        setIncoming( ({ type, message }) => ({ type, message: message + text }));
       }
-      else{
-        setMessages((state) => [...state, {message: data.text, type:'api'}])
-        setHistory((state) => [...state, [question, data.text]])
-      }
-
-      setLoading(false)
-
-      messagesRef.current?.scrollTo(0, messagesRef.current.scrollHeight);
-      
-    }
-    catch(error)
-    {
-      setLoading(false)
-      setError("Error. Please try again!")
+      setLoading(false);
+      setIncoming( { type: "api", message: "" });
+    } 
+    catch (error) {
+      setLoading(false);
+      setError("Error. Please try again!");
     }
   }
 
@@ -109,7 +103,7 @@ function bot() {
 
 
   return (
-    <div className='h-screen'>
+    <div className='h-screen animate__animated animate__fadeIn animate__slow'>
       <Link href={"/"}>
         <div className='flex hover:-translate-y-1 transition-transform cursor-pointer pt-3 pl-3'>
           <span className="mr-1 text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
@@ -131,17 +125,17 @@ function bot() {
         {/* The Messages Container */}
         <div className='h-3/4 w-3/4 rounded-md border-gray-200 border-2 flex justify-center items-center'>
           {/* The Messages */}
-          <div className='w-full h-full overflow-auto bg-transparent' ref={messagesRef}>
+          <div id="messages" className='w-full h-full overflow-auto bg-transparent' ref={messagesRef}>
             {
               messages.map((message, index) => {
                 if (message.type === 'api')
                 {
                   return(
-                    <div key={index} className='flex p-4 bg-gray-200 rounded-sm'>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10">
+                    <div key={index} className='flex p-10 bg-gray-200'>
+                      <span className="bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10 text-xl text-white rounded-lg flex justify-center items-center">
                         <i className="fa-solid fa-robot"></i>
                       </span>
-                      <div className=''>
+                      <div className='ml-8 w-full'>
                         <p>{message.message}</p>
                       </div>
                     </div>
@@ -150,11 +144,11 @@ function bot() {
                 else
                 {
                   return(
-                    <div key={index} className='flex p-4'>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10">
+                    <div key={index} className='flex p-10'>
+                      <span className="bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10 text-xl text-white rounded-lg flex justify-center items-center">
                         <i className="fa-solid fa-user"></i>
                       </span>
-                      <div>
+                      <div className='ml-8 w-full'>
                         <p>{message.message}</p>
                       </div>
                     </div>
@@ -162,10 +156,55 @@ function bot() {
                 }
               })
             }
+            {
+              loading &&
+              <div className='flex p-10 bg-gray-200'>
+                <span className="bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10 text-xl text-white rounded-lg flex justify-center items-center">
+                  <i className="fa-solid fa-robot"></i>
+                </span>
+                <div className='ml-8 w-full'>
+                  <p>{incoming.message}</p>
+                </div>
+              </div>
+            }
           </div>
         </div>
         {/* The Input Container */}
-        <div className='h-1/6 w-3/4 rounded-md border-gray-200 border-2'>
+        <div className='w-3/4 rounded-md border-gray-200 border-2 relative'>
+          <form
+            onSubmit={handleSubmit}
+            className='flex justify-center items-center'>
+            <textarea
+              disabled={loading}
+              onKeyDown={handleEnter}
+              ref={inputRef}
+              autoFocus={false}
+              rows={2}
+              maxLength={512}
+              id="input"
+              name="input"
+              placeholder={
+                loading ? 'Waiting for response...'
+                : 'Give a brief description of Colin Le.'
+              }
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              className='w-full p-4 pr-10 resize-none focus:outline-none rounded-md'
+            >
+            </textarea>
+            <button
+              type="submit"
+              disabled={loading}
+              className={`absolute right-3 hover:-translate-y-1 transition-transform cursor-pointer ${loading ? "animate-spin" : ""}`}>
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-7 w-7 text-xl flex justify-center items-center">
+                {!loading ? (
+                  <i className="fa-solid fa-comment"></i>
+                ) : (
+                  <i className="fa-solid fa-spinner"></i>
+                )}
+              </span>
+            </button>
+          </form>
         </div>
       </div>
     </div>

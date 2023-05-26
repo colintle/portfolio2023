@@ -52,7 +52,7 @@ function Experience() {
           <div className='text-mg lg:text-lg xl:text-xl flex flex-col flex-grow'>
             {/*Horizontal Scroll Bar*/}
             <div ref={menuRef} id="horizontal" className="text-neutral-500 m-auto w-full overflow-auto mb-4">
-              <div className="flex w-screen justify-between">
+              <div className="flex w-[1250px] justify-between">
                 {Object.keys(EXPERIENCE).map((name, idx) => {
                   return (
                     <button key={idx} value={name} onClick={handleTracker} className='hover:-translate-y-1 transition-transform cursor-pointer'>

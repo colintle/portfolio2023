@@ -24,7 +24,7 @@ function Hero() {
           <button className="mt-8 bg-white rounded-2xl p-3 shadow-lg hover:-translate-y-1 transition-transform cursor-pointer flex">
             <p className="text-black shadow-lg">
               <strong>
-                Talk to my Assistant
+                Talk to my AI Assistant
               </strong>
             </p>
             <div className="shadow-lg">
