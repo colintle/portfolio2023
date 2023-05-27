@@ -72,8 +72,8 @@
 #messages::-webkit-scrollbar-thumb {
   background-color:rgb(229 231 235);
   background-clip: content-box;
-  border-radius: 0px;
-  border: 0px solid transparent;
+  border-radius: 20px;
+  border: 1px solid transparent;
 }
 
 #messages::-webkit-scrollbar {
