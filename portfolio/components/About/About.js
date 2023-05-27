@@ -4,7 +4,7 @@ function About() {
   const {ref, inView} = useInView({threshold:0.25, triggerOnce: true})
 
   return (
-    <div ref={ref} className={`${inView ? "animate__animated animate__fadeIn animate__slow" : "opacity-0"} min-h-screen flex justify-center`}>
+    <div ref={ref} className={`${inView ? "animate__animated animate__fadeIn animate__slow" : "opacity-0"} min-h-screen flex justify-center bg-white`}>
         <div className='w-3/4 md:w-1/2 flex flex-col'>
             {/* <p className="text-black">{inView ? "True" : "False"}</p> */}
             <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-5'>

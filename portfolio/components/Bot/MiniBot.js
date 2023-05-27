@@ -7,7 +7,7 @@ function MiniBot() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [incoming, setIncoming] = useState( { type: "api", message: "" });
-  const [newMessage, setNewMessage] = useState( { role: "ai", message: "" } );
+  const [newMessage, setNewMessage] = useState( { type: "api", message: "" } );
 
   // Basically chat history between bot and the user
   const [messages, setMessages] = useState([
@@ -62,8 +62,8 @@ function MiniBot() {
     setInput("")
     setIncoming( { type: "api", message: "" });
     try {
-      const response = await fetch("api/respond", {
-        method: "POST",
+      const response = await fetch("/api/langchain", {
+        method: 'POST',
         body: JSON.stringify({ question: question, history: history }),
         headers: {
           "Content-Type": "application/json",
@@ -186,7 +186,7 @@ function MiniBot() {
               className={`absolute right-3 hover:-translate-y-1 transition-transform cursor-pointer ${loading ? "animate-spin" : ""}`}>
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-7 w-7 text-xl flex justify-center items-center">
                 {!loading ? (
-                  <i class="fa-solid fa-paper-plane"></i>
+                  <i className="fa-solid fa-paper-plane"></i>
                 ) : (
                   <i className="fa-solid fa-spinner"></i>
                 )}
