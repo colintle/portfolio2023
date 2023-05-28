@@ -73,7 +73,7 @@ function Projects() {
                   <InView threshold={0.2} onChange={() => onChangeInView(idx)} triggerOnce={true}>
                     {
                       idx % 2 == 0 && (
-                        <div className={`${values[idx] ? "animate__animated animate__slideInUp animate__fast" : "opacity-0"} flex flex-col md:flex-row md:space-x-12`}>
+                        <div className={`${values[idx] ? "animate__animated animate__slideInUp animate__faster" : "opacity-0"} flex flex-col md:flex-row md:space-x-12`}>
                           {/* <p className="text-black">{values[idx] ? "True" : "False"}</p> */}
                           {picture(project.image)}
                           {description(project.name, project.description, project?.note, project?.github, false)}
@@ -83,7 +83,7 @@ function Projects() {
                     }
                     {
                       idx % 2 == 1 && (
-                        <div className={`${values[idx] ? "animate__animated animate__slideInUp animate__fast" : "opacity-0"} flex flex-col md:flex-row md:space-x-12`}>
+                        <div className={`${values[idx] ? "animate__animated animate__slideInUp animate__faster" : "opacity-0"} flex flex-col md:flex-row md:space-x-12`}>
                           {/* <p className="text-black">{values[idx] ? "True" : "False"}</p> */}
                           {description(project.name, project.description, project?.note, project?.github, true)}
                           {picture(project.image)}
