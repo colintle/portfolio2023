@@ -22,7 +22,7 @@ function Index() {
   }, [router.pathname]);
 
   return (
-    <div className="bg-black text-black">
+    <div className="bg-black text-black font-sf">
         <Background/>
         <Hero/>
         <About/>

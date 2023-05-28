@@ -1,14 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      './app/**/*.{js,ts,jsx,tsx}',
+      './components/**/*.{js,ts,jsx,tsx}',
+    ]
+  },
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ['SF Pro', 'SF Pro Regular', 'SF Pro Display Thin'],
+      'sans': ['SF Pro', 'SF Pro Regular', 'SF Pro Display Thin'],
+      sf: ['SF Pro', 'SF Pro Regular', 'SF Pro Display Thin']
+    },
     extend: {
-      fontFamily: {
-        'sans': ['SF Pro', 'SF Pro Regular', 'SF Pro Display Thin']
-      },
       keyframes: {
         rotate: {
           '0%': { transform: 'rotate(0.0deg)' },
