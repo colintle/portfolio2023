@@ -27,7 +27,7 @@ module.exports = {
         }
       },
       animation: {
-        rotate: 'rotate 10s linear infinite',
+        rotate: 'rotate 10s 2s linear infinite',
         'fade-in': 'fade-in 1s forwards',
         'fade-out': 'fade-out 1s forwards'
       },

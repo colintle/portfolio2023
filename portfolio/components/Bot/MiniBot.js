@@ -104,9 +104,9 @@ function MiniBot() {
 
   return (
     <div className='bg-white h-full animate__animated animate__fadeIn animate__slow rounded-xl border-4 border-purple-700'>
-      <h1 className='w-fit m-auto text-2xl lg:text-3xl xl:text-4xl text-center my-2'>
+      <h1 className='w-fit m-auto text-lg lg:text-xl text-center my-2'>
           ProfiLeAI
-          <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
+          <hr className='h-1 mx-auto bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
       </h1>
       {/* The Chat */}
       <div className='flex flex-col justify-between items-center h-3/4'>

@@ -33,12 +33,14 @@
     font-family: 'SF Pro Regular';
   }
 
-  /* h3, li {
-    font-family: 'SF Pro Display Thin';
-  } */
-
   @media (max-height: 300px) {
     #arrow, .resize {
+      display: none;
+    }
+  }
+
+  @media (max-width: 300px){
+    .resize {
       display: none;
     }
   }

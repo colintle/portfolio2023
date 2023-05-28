@@ -62,7 +62,7 @@ function Projects() {
           Featured Projects
           <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 to-purple-700 border-0 rounded'></hr>
         </h1>
-        <div className='text-mg lg:text-lg xl:text-xl flex flex-col space-y-28 my-5'>
+        <div className='text-md lg:text-lg xl:text-xl flex flex-col space-y-28 my-5'>
           {
             PROJECTS.map((project, idx) => {
               return (

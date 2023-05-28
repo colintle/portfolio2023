@@ -49,7 +49,7 @@ function Experience() {
             <hr className='h-1 mx-auto my-2 bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0 rounded'></hr>
           </h1>
           {/*This will be where the experience is going to be at*/}
-          <div className='text-mg lg:text-lg xl:text-xl flex flex-col flex-grow'>
+          <div className='text-md lg:text-lg xl:text-xl flex flex-col flex-grow'>
             {/*Horizontal Scroll Bar*/}
             <div ref={menuRef} id="horizontal" className="text-neutral-500 m-auto w-full overflow-auto mb-4">
               <div className="flex w-[1250px] justify-between">
