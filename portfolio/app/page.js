@@ -12,16 +12,23 @@ import 'animate.css';
 import "../styles/globals.css";
 
 import { useRouter } from 'next/navigation';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Index() {
   const router = useRouter()
+  const [finished, setFinished] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [router.pathname]);
 
-  return (
+  useEffect(() => {
+    setTimeout(() => {
+      setFinished(true)
+    }, 1000)
+  }, [])
+
+  return finished && (
     <div className="bg-black text-black font-sf">
         <Background/>
         <Hero/>
