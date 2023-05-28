@@ -43,9 +43,12 @@ function Projects() {
           {github && (
             <Link href={github} target="_blank">
               <div className={`hover:-translate-y-1 transition-transform cursor-pointer ${right ? "float-right" : ""}`}>
-                <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
+                {/* <span className="text-3xl text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700">
                   <i className="fa-brands fa-github"></i>
-                </span> 
+                </span>  */}
+                <span className="bg-gradient-to-b from-sky-600 to-purple-700 h-10 w-10 text-xl text-white rounded-lg flex justify-center items-center">
+                  <i className="fa-brands fa-github"></i>
+                </span>
               </div>
             </Link>
           )}
