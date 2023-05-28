@@ -111,7 +111,7 @@ function MiniBot() {
       {/* The Chat */}
       <div className='flex flex-col justify-between items-center h-3/4'>
         {/* The Messages Container */}
-        <div className='h-3/4 w-5/6 rounded-md border-gray-200 border-2 flex justify-center items-center'>
+        <div className='h-4/6 w-5/6 rounded-md border-gray-200 border-2 flex justify-center items-center'>
           {/* The Messages */}
           <div id="messages" className='w-full h-full overflow-auto bg-transparent' ref={messagesRef}>
             {

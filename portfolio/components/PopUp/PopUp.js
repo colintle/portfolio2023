@@ -12,7 +12,7 @@ function PopUp() {
                   <i className="fa-solid fa-comment"></i>
                 </span>
             </button>
-            <div className={`fixed right-5 bottom-16 h-72 w-88 ${pop ? "animate-fade-in opacity-0" : "opacity-0 pointer-events-none"}`}>
+            <div className={`fixed right-5 bottom-16 h-72 w-80 lg:h-80 lg:w-96 ${pop ? "animate-fade-in opacity-0" : "opacity-0 pointer-events-none"}`}>
                 <MiniBot/>
             </div>
         </div>
