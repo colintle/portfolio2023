@@ -7,6 +7,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
       <head>
+        <link rel='stylesheet' href="/styles/globals.css"/>
         <script src="https://kit.fontawesome.com/b935e69800.js" crossOrigin="anonymous"></script>
         <link rel="icon" href="/images/icon.png" type="image/png"/>
       </head>

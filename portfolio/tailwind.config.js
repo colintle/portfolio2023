@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['SF Pro', 'SF Pro Regular', 'SF Pro Display Thin']
+      },
       keyframes: {
         rotate: {
           '0%': { transform: 'rotate(0.0deg)' },

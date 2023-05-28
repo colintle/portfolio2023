@@ -2,28 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
- @font-face {
+@layer base{
+  @font-face {
     font-family: 'SF Pro Regular';
     font-weight: 400;
     font-style: normal;
-    src: url('../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
   }
 
   @font-face {
     font-family: 'SF Pro Display Thin';
     font-weight: 400;
     font-style: normal;
-    src: url('../public/fonts/SF-Pro-Display-Thin.otf') format('opentype');
+    src: url('../fonts/SF-Pro-Display-Thin.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'SF Pro';
     font-weight: 1000;
     font-style: normal;
-    src: url('../public/fonts/SF-Pro-Text-Bold.otf') format('opentype');
-  }  
-  /* Add additional @font-face rules for any other weights or styles you need */
-  
+    src: url('../fonts/SF-Pro-Text-Bold.otf') format('opentype');
+  }
+
+  html {
+    font-family: 'SF Pro';
+  }
+
   body {
     font-family: 'SF Pro';
     overflow: overlay;
@@ -32,6 +36,8 @@
   p, button, h3, li, textarea {
     font-family: 'SF Pro Regular';
   }
+}  
+  /* Add additional @font-face rules for any other weights or styles you need */
 
   @media (max-height: 300px) {
     #arrow, .resize {
