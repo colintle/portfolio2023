@@ -3,10 +3,13 @@ import Link from 'next/link'
 import { PROJECTS } from '@/data/Data'
 import { useState } from 'react'
 import { useInView, InView } from "react-intersection-observer"
+import Modal from 'react-modal'
 
 function Projects() {
   const {ref, inView} = useInView({threshold:0.05, triggerOnce: true})
   const [values, setValues] = useState(new Array(PROJECTS.length).fill(true))
+  const [showModal, setShowModal] = useState(false);
+  const [gif, setGif] = useState(null);
 
   const onChangeInView = (index) => {
     setValues((prevValues) => {
@@ -15,13 +18,24 @@ function Projects() {
       return newValues; // Return the updated values array
     });
   };
-  
-  
+
+  const onSetModal = (e) => {
+    console.log(e.target.value)
+    setShowModal(true)
+    setGif(e.target.src)
+  }
+
+  const resetModal = () => {
+    setShowModal(false)
+    setGif("")
+  }
 
   const picture = (image) => {
     return (
       <div className='mt-8 md:w-1/2'>
         <Image
+          onClick={onSetModal}
+          value={image}
           src={image}
           width={1000}
           height={1000}
@@ -98,6 +112,29 @@ function Projects() {
           }
         </div>
         {/* <p className="text-black">{inView ? "True" : "False"}</p> */}
+        {
+          showModal && (
+          // <div className='z-20 fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center text-white'>
+          //   Hello
+          // </div>
+          <Modal
+          isOpen={showModal}
+          onRequestClose={resetModal}
+          className="animate__animated animate__fadeIn bg-black bg-opacity-25 backdrop-blur-sm h-screen flex flex-col justify-center items-center">
+            <div className='w-1/2 flex flex-row-reverse'>
+              <button onClick={resetModal} className='hover:-translate-y-1 transition-transform cursor-pointer'>
+                <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-7 w-7 text-2xl flex justify-center items-center">
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+              </button>
+            </div>
+            <img
+            src={gif}
+            className='rounded-xl shadow-xl w-1/2 h-4/6'
+            />
+          </Modal>
+          )
+        }
       </div>
     </div>
   )

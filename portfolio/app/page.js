@@ -13,6 +13,7 @@ import "../styles/globals.css";
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
 
 function Index() {
   const router = useRouter()

@@ -16,7 +16,7 @@ function Background() {
         <Particles
         id="tsparticles"
         init={particlesInit}
-        className="h-screen bg-black"
+        className="h-screen bg-black -z-10"
         options={{
             fullScreen: {
                 enable: false,

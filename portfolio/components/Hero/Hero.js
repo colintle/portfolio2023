@@ -11,7 +11,7 @@ function Hero() {
   const [arrow, setArrow] = useState(false)
 
   return(
-    <div ref={ref} className="absolute z-10 top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
+    <div ref={ref} className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
       {/* <p className="text-white">{inView ? "True" : "False"}</p> */}
       <div className="animate__animated animate__slideInDown animate__slow flex flex-col justify-center items-center">
         <p className="text-lg lg:text-xl xl:text-2xl">Hi, I'm</p>
