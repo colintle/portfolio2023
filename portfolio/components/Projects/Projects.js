@@ -121,7 +121,7 @@ function Projects() {
           isOpen={showModal}
           onRequestClose={resetModal}
           className="animate__animated animate__fadeIn bg-black bg-opacity-25 backdrop-blur-sm h-screen flex flex-col justify-center items-center">
-            <div className='w-1/2 flex flex-row-reverse'>
+            <div className='w-80 lg:w-96 flex flex-row-reverse'>
               <button onClick={resetModal} className='hover:-translate-y-1 transition-transform cursor-pointer'>
                 <span className="text-transparent bg-clip-text bg-gradient-to-b from-sky-600 to-purple-700 h-7 w-7 text-2xl flex justify-center items-center">
                   <i class="fa-solid fa-xmark"></i>
@@ -130,7 +130,7 @@ function Projects() {
             </div>
             <img
             src={gif}
-            className='rounded-xl shadow-xl w-1/2 h-4/6'
+            className='rounded-xl shadow-xl h-72 w-80 lg:h-80 lg:w-96'
             />
           </Modal>
           )
