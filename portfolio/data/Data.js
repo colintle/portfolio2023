@@ -70,7 +70,7 @@ export const EXPERIENCE = {
   },
   "Mirizan":   {
     name: 
-    <h3>Sofware Engineering Intern 
+    <h3>Software Engineering Intern 
       <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Mirizan LLC</strong>
     </h3>,
     duration: "January 2022 - May 2022",
