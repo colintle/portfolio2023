@@ -10,13 +10,13 @@ function Footer() {
             <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
           </a>
-        <a href="mailto:colintranle@knights.ucf.edu" target="_blank" rel="noreferrer noopener">
+        <a href="mailto:co986387@ucf.edu" target="_blank" rel="noreferrer noopener">
           <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             Email
             <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>
           </h3>
         </a>
-        <a href="https://www.linkedin.com/in/colin-le-527a2321a/" target="_blank" rel="noreferrer noopener">
+        <a href="https://www.linkedin.com/in/colintle/" target="_blank" rel="noreferrer noopener">
           <h3 className='w-fit text-transparent bg-clip-text bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700'>
             Linkedin
             <hr className='h-0.5 mx-auto bg-gradient-to-b from-sky-600 via-sky-200 to-purple-700 border-0'></hr>

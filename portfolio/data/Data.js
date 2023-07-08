@@ -36,7 +36,7 @@ export const PROJECTS = [{
 ]
 
 export const EXPERIENCE = {
-  "J.P. Morgan & Chase": {
+  "J.P. Morgan Chase & Co.": {
     name: 
     <h3>Software Engineering Intern
       <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ J.P. Morgan & Chase</strong>
