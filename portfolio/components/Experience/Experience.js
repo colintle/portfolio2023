@@ -19,7 +19,7 @@ const listMaker = (list, index) => {
 };
 
 function Experience() {
-  const [tracker, setTracker] = useState(EXPERIENCE["J.P. Morgan & Chase"])
+  const [tracker, setTracker] = useState(EXPERIENCE["J.P. Morgan Chase & Co."])
   const {ref, inView} = useInView({threshold:0.25, triggerOnce: true})
   const menuRef = useRef(null);
 
