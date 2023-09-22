@@ -39,10 +39,12 @@ export const EXPERIENCE = {
   "J.P. Morgan Chase & Co.": {
     name: 
     <h3>Software Engineering Intern
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ J.P. Morgan & Chase</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ J.P. Morgan Chase & Co.</strong>
     </h3>,
     duration: "June 2023 - August 2023",
-    description: ["TBA"]
+    description: ["Designed and developed a user-friendly web application for merchant services, streamlining payment processing and enhancing the user experience for commercial clients, utilizing J.P. Morgan Chase & Co. UI Toolkit and React.js",
+    "Deployed services on public and private cloud infrastructure, leveraging AWS, and implementing standard CI/CD pipelines for efficient software delivery","Incorporated modern APIs and cloud-native environments into our application to seamlessly integrate and provide support for over 28 million merchants worldwide"
+    ]
   }, 
   "University of Central Florida": {
     name: 
