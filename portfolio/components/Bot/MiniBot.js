@@ -15,9 +15,6 @@ function MiniBot() {
       message: 'Hi, what would you like to know about Colin Le?',
       type: 'api',
     }])
-
-  // Use to send to "/api/respond"
-  const [history, setHistory] = useState([])
   
   const messagesRef = useRef(null);
   const inputRef = useRef(null);
@@ -64,7 +61,7 @@ function MiniBot() {
     try {
       const response = await fetch("/api/langchain", {
         method: 'POST',
-        body: JSON.stringify({ question: question, history: history }),
+        body: JSON.stringify({ question: question }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -74,11 +71,9 @@ function MiniBot() {
   
       while (true) {
         const { done, value } = await reader.read();
-  
         if (done) {
           break;
         }
-  
         const text = new TextDecoder().decode(value);
         setIncoming( ({ type, message }) => ({ type, message: message + text }));
       }
