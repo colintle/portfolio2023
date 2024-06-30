@@ -36,6 +36,26 @@ export const PROJECTS = [{
 ]
 
 export const EXPERIENCE = {
+  "Microsoft": {
+    name: 
+    <h3>Software Engineering Intern
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Microsft</strong>
+    </h3>,
+    duration: "May 2024 - August 2024",
+    description: ["Incorporated Weighted ECMP (W-ECMP) on both a virtual switch and virtual chassis configurations (both in SONiC), accommodating both single ASIC and multi-ASIC environments to enhance BGP and load balancing capabilities",
+      "Improved the CLI for W-ECMP to effectively display its status configurations, facilitating better diagnostics and management of weighted cost multipath configurations",
+      "Developed a virtual chassis testbed within the SONiC framework to simulate complex network environments with single ASIC and multi-ASIC capabilities"]
+  },
+  "RISES Lab": {
+    name: 
+    <h3>Undergraduate Researcher in Machine Learning 
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ RISES Lab</strong>
+    </h3>,
+    duration: "Jan 2024 - Present",
+    description: ["Introduced a systematic framework for generating synthetic outage data, leveraging graph models of distribution networks with high-fidelity, reflecting over 10 million electrical nodes and 120,000 km of power lines to simulate realistic network conditions",
+      "Enhanced the prediction accuracy of outage probabilities by integrating physical characteristics of the network into machine learning models, utilizing fragility curves and the Union Rule to compute joint probabilities of service outages",
+      "Applied the proposed modeling approach to a specific distribution network, P3R, during a bomb cyclone event, successfully mapping the outage probabilities across 767 nodes to demonstrate the model’s predictive capability under extreme weather conditions"] 
+    },
   "J.P. Morgan Chase & Co.": {
     name: 
     <h3>Software Engineering Intern
