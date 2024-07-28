@@ -34,13 +34,15 @@ export async function POST(req, res) {
   const embedding = response.data.data[0].embedding;
 
   const queryResponse = await index.namespace(PINECONE_NAME_SPACE).query({
-    topK: 1,
+    topK: 3,
     vector: embedding,
     includeValues: true,
     includeMetadata: true,
   });
 
   const context = queryResponse.matches.map((match) => match.metadata.text).join('\n');
+
+  console.log(context)
 
  response = await openai.createChatCompletion({
   model: "gpt-4",
