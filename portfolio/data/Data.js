@@ -39,7 +39,7 @@ export const EXPERIENCE = {
   "Microsoft": {
     name: 
     <h3>Software Engineering Intern
-      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Microsft</strong>
+      <strong className='text-transparent bg-clip-text bg-gradient-to-b from-sky-600  via-sky-200 to-purple-700'> @ Microsoft</strong>
     </h3>,
     duration: "May 2024 - August 2024",
     description: ["Incorporated Weighted ECMP (W-ECMP) on both a virtual switch and virtual chassis configurations (both in SONiC), accommodating both single ASIC and multi-ASIC environments to enhance BGP and load balancing capabilities",
